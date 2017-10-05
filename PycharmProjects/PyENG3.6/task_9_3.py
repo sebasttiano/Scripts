@@ -31,7 +31,7 @@ from sys import argv
 filename = argv[1]
 
 def ip_mask(filename):
-    source = '/home/svoronov/pyneng-examples-exercises/exercises/07_functions/{}'.format(filename)
+    source = '/home/svoronov/pyneng-examples-exercises/exercises/09_regex/{}'.format(filename)
     with open(source, 'r') as file:
         cfg = file.read()
         regex = re.compile(' +ip address (?P<ip>\d+\.\d+\.\d+\.\d+) +(?P<mask>\d+\.\d+\.\d+\.\d+)')
