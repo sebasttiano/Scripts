@@ -23,4 +23,20 @@
 
 '''
 
+from task_15_4 import parse_sh_ip_int_br
+from sys import argv
+
+filename = argv[1]
+data = parse_sh_ip_int_br(filename)
 headers = ['interface', 'address', 'status', 'protocol']
+
+
+def convert_to_dict(head, data):
+    result = []
+    for i in data:
+        sample_dict = {head[0]: i[0], head[1]: i[1], head[2]: i[2], head[3]: i[3]}
+        result.append(sample_dict)
+    return result
+
+if __name__ == '__main__':
+    convert_to_dict(headers, data)

@@ -27,14 +27,21 @@ import re
 from sys import argv
 
 filename = argv[1]
+result = []
 
-def parse_sh_ip_int_br:
-    source = '/home/svoronov/pyneng-examples-exercises/exercises/15_module_re/{}'.format(filename)
+
+def parse_sh_ip_int_br(source):
     with open(source, 'r') as file:
         for line in file:
             regex = re.compile('(?P<int>^\S+) +'
-                               '(?P<ip>\d+\.\d+\.\d+\.\d+).+'
+                               '(?P<ip>\S+).+'
                                '(?P<stat>up|administratively down) +'
                                '(?P<proto>\w+)')
             match = regex.findall(line)
-            print(match)
+            if match:
+                result.append(match[0])
+    return result
+
+if __name__ == "__main__":
+    parse_sh_ip_int_br(filename)
+    print(result)
