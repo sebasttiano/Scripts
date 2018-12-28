@@ -36,30 +36,19 @@ def parse_file(file):
     content = ''
     with open(file, 'r') as f:
         for line in f:
-            content += line
+            content += line.rstrip()
     return content
-
-
-def get_payload(text):
-    list = re.split('Port ID', text)
-    return list[1]
 
 
 def parse_sh_cdp_neighbors(output):
     """:returns Example
     {'R4': {'Fa0/1': {'R5': 'Fa0/1'},
             'Fa0/2': {'R6': 'Fa0/0'}}}"""
-    result_dict = {}
-    second_dict = {}
-    hostname = re.search('(\S+)>', output).group(1)
-    regex = r'(?P<rem_host>\S+)\s+(?P<local_int>\S+ \S+) +\d+ +\S? \S? \S? +\S* +(?P<rem_int>\S+ \S+)'
-    preform = get_payload(output)
-    data = re.finditer(regex, preform)
-    for match in data:
-        third_dict = {match[1]: match[3]}
-        second_dict[match[2]] = third_dict
-    result_dict[hostname] = second_dict
-    return result_dict
+    hostname = re.search('(\w+)>', output).group(1)
+    #print(hostname)
+    local_int = re.findall(r'.*(Eth|Fa /d/+).*', output)
+    print(local_int)
 
-#a = parse_file(FILE)
-#parse_sh_cdp_neighbors(a)
+
+a = parse_file(FILE)
+parse_sh_cdp_neighbors(a)
