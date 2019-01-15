@@ -47,7 +47,7 @@ def generate_topology_from_cdp(list_of_files, save_to_file=True, topology_filena
     if save_to_file:
         with open(topology_filename, 'w') as f:
             yaml.dump(topology, f)
-    print(topology)
+    #print(topology)
     return topology
 
 generate_topology_from_cdp(LIST)

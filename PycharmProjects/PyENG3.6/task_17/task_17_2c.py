@@ -32,9 +32,38 @@
 '''
 
 
-import graphviz as gv
 import yaml
 from task_17.draw_network_graph import draw_topology
-from task_17.task_17_2b import generate_topology_from_cdp
-from task_17.task_17_2 import parse_sh_cdp_neighbors, parse_file
 
+
+def read_from_yaml(file):
+    with open (file) as f:
+        templates = yaml.load(f)
+    return templates
+
+
+def convert_to_the_format(templates):
+    result_dict = {}
+    for host in templates:
+        for local_port in templates[host]:
+            result_dict [(host, local_port)] = (list(templates[host][local_port].keys())[0],
+                                                list(templates[host][local_port].values())[0])
+    return result_dict
+
+
+def delete_dublicates(dictionary):
+    for keys in list(dictionary.keys()):
+        for values in list(dictionary.values()):
+            if keys == values:
+                del(dictionary[keys])
+    return dictionary
+
+
+def main():
+    data = read_from_yaml('topology.yaml')
+    preform = delete_dublicates(convert_to_the_format(data))
+    draw_topology(preform)
+
+
+if __name__ == '__main__':
+    main()
