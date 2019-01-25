@@ -33,6 +33,7 @@ def create_db(filename):
     with open(schema_filename, 'r') as f:
         schema = f.read()
     conn.executescript(schema)
+    conn.close()
     print('Done')
 
 
@@ -46,15 +47,12 @@ def check_availability(filename):
         return False
 
 
-def main():
-    print('The main has been worked nice!!')
-
 if __name__ == '__main__':
     if check_availability(db_filename):
-        main()
+        print('Finishing the work!')
     else:
         create_db(db_filename)
-        main()
+
 
 
 
