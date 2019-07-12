@@ -2,15 +2,15 @@
 
 - name: Run show commands on routers
   hosts: cisco-routers
-  gather_facts: false
-  connection: local
+  #connection: network_cli
+  #gather_facts: false
+
 
   tasks:
 
     - name: run sh ip int br
       ios_command:
         commands: show ip int br
-        provider: "{{ cli }}"
       register: sh_ip_int_br_result
 
     - name: Debug registered var

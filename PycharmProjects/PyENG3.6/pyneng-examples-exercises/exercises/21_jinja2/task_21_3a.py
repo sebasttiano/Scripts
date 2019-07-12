@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 '''
 Задание 21.3a
 
@@ -15,8 +14,7 @@
 
 
 Проверьте получившийся шаблон templates/ospf.txt, на данных в файле data_files/ospf2.yml,
-с помощью функции generate_cfg_from_template из задания 21.1-21.1d.
+с помощью функции generate_cfg_from_template из задания 21.1-21.1c.
 Не копируйте код функции.
 
 '''
-

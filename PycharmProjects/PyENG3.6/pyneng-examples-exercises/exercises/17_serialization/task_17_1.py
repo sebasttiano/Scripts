@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 '''
 Задание 17.1
 
@@ -45,39 +44,8 @@
 '''
 
 import glob
-import re
 
-headers = ['hostname', 'ios', 'image', 'uptime']
 sh_version_files = glob.glob('sh_vers*')
 #print(sh_version_files)
 
-
-def parse_file(file):
-    content = ''
-    with open(file, 'r') as f:
-        for line in f:
-            content += line.rstrip()
-    #print(content)
-    return content
-
-
-def parse_sh_version(output):
-    """:returns tuple with data (ios, image, uptime)"""
-    regex = '.*Version (\d+\.\d+\(\d+\)\w+)' \
-            '.*uptime is ([\w\W]+minute\w?)' \
-            '.*image file is "([\w\W]+?)"'
-    match = re.search(regex, output)
-    #match = re.search('.*Version (\d+\.\d+\(\d+\)\w+).*uptime is ([\w\W]+minute\w?).*image file is "([\w\W]+?)"', output)
-    #match = re.search('.*uptime is ([\w\W]+minute\w?).*', output)
-    print(match.groups())
-
-
-
-def main():
-    for i in sh_version_files:
-        # load contents from files
-        text = parse_file(i)
-        parse_sh_version(text)
-
-if __name__ == '__main__':
-    main()
+headers = ['hostname', 'ios', 'image', 'uptime']
