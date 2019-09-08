@@ -22,11 +22,15 @@ add_data.py
 '''
 
 
+import sys
+import os
 import glob
 import sqlite3
 import re
 import yaml
+sys.path.append('/home/voronov/Scripts/PycharmProjects/PyENG3.6/')
 from task_18.task_18_1.create_db import create_db
+
 
 db_filename = 'dhcp_snooping.db'
 dhcp_snoop_files = glob.glob('sw*_dhcp_snooping.txt')
@@ -62,6 +66,21 @@ def create_connection(db_name):
     return conn
 
 
+def check_file_db(filename):
+    if os.path.exists(filename):
+        return True
+    else:
+        print("Db doesn't exist!")
+        while True:
+            answer = input("Create?yes/no?   : ")
+            if answer == 'yes' or answer == 'no':
+                break
+            else:
+                print("Only yes or no available")
+                continue
+        return True if answer == 'yes' else False
+
+
 def write_to_db(connection, query, data_tuple):
     try:
         with connection:
@@ -81,7 +100,10 @@ def write_to_db(connection, query, data_tuple):
 
 if __name__ == '__main__':
     print('Connecting to the db...', end='', flush=True)
-    con = create_connection(db_filename)
+    if check_file_db(db_filename):
+        con = create_connection(db_filename)
+    else:
+        sys.exit(1)
     if con:
         print('Done!')
     query_insert_dhcp = 'INSERT INTO dhcp VALUES (?, ?, ?, ?, ?)'

@@ -26,7 +26,7 @@ import glob
 import sqlite3
 import re
 import yaml
-from task_18.task_18_1.create_db import create_db
+from create_db import create_db
 
 db_filename = 'dhcp_snooping.db'
 dhcp_snoop_files = glob.glob('sw*_dhcp_snooping.txt')
