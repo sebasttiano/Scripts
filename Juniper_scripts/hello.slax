@@ -1,0 +1,6 @@
+version 1.0;
+match / {
+	<op-script-results> {
+		<output> "Hello! I`m Juniper MX80!\n";
+	}
+}
