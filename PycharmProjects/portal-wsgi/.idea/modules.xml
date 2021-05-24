@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/portal-wsgi.iml" filepath="$PROJECT_DIR$/.idea/portal-wsgi.iml" />
+      <module fileurl="file:///run/user/1000/gvfs/sftp:host=92.53.116.181,user=s.voronov/home/s.voronov/.idea/s.voronov.iml" filepath="/run/user/1000/gvfs/sftp:host=92.53.116.181,user=s.voronov/home/s.voronov/.idea/s.voronov.iml" />
+    </modules>
+  </component>
+</project>

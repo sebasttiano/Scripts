@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="Events Test Scheme">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="Events Test Scheme" />
+              <option name="relativePathToSchema" value="../../../../../snap/pycharm-community/214/lib/platform-statistics-devkit.jar!/schemas/events-test-scheme.schema.json" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="file:///run/user/1000/gvfs/sftp:host=92.53.116.106,user=ansible/home/ansible/ansible/playbooks/generate_inventory.yml" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

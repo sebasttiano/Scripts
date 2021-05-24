@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="/run/user/1000/gvfs/sftp:host=92.53.116.106,user=ansible/home/ansible/ansible" vcs="Git" />
+  </component>
+</project>

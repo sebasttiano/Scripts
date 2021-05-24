@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Timeweb_2.7.iml" filepath="$PROJECT_DIR$/.idea/Timeweb_2.7.iml" />
+      <module fileurl="file:///run/user/1000/gvfs/sftp:host=176.57.223.27,user=s.voronov/home/s.voronov/noc-scripts/.idea/noc-scripts.iml" filepath="/run/user/1000/gvfs/sftp:host=176.57.223.27,user=s.voronov/home/s.voronov/noc-scripts/.idea/noc-scripts.iml" />
     </modules>
   </component>
 </project>
