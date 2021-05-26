@@ -20,7 +20,6 @@ class Player:
         self.cell_type = cell_type
 
 
-
 class GameField:
     def __init__(self):
         self.height = 3
