@@ -19,3 +19,6 @@
 17: https://vimeo.com/452233645 super() и делегирование родителям
 18: https://vimeo.com/452947462 Дескрипторы. Non-data дескрипторы
 19: https://vimeo.com/452947496 Дескрипторы данных
+20: https://vimeo.com/452947508 Слабые ссылки weakref и проблема хранения данных в экземпляре дескриптора
+21: https://vimeo.com/452947527 Метод __set_name__ и хранение данных в экземпляре класса-владельца
+22: https://docs.google.com/spreadsheets/d/1qczlH5zMAwlRQS6c5zy8O3AH19uYIjPcISesiboC9ZQ/edit?usp=sharing - Таблица Dander-методов, перегружающих операторы
