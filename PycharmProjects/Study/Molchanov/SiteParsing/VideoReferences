@@ -1,0 +1,17 @@
+0: https://vimeo.com/362050199 Подготовка: установка pip3, BeautifulSoup, lxml, requests
+1: https://vimeo.com/362050264 Введение. Базовый пример работы с BeautifulSoup
+2: https://vimeo.com/362050432 Парсинг множественных данных и экспорт в csv-файл
+3: https://vimeo.com/362050663 Парсинг табличных данных
+4.1: https://vimeo.com/362050799 Работа с пагинацией сайтов (метод 1)
+4.2: https://vimeo.com/362050979 Работа с пагинацией сайтов (метод 2)
+5: https://vimeo.com/362051123 Чтение и запись данных в csv-файлы
+6: https://vimeo.com/362051218 Продвинутые приемы работы с библиотекой BeautifulSoup
+7: https://vimeo.com/363786558 Сохранение данных в БД Postgresql с помощью ОРМ peewee
+8: https://vimeo.com/363786614 Парсинг данных подгружаемых через AJAX часть 1
+9: https://vimeo.com/363786738 Парсинг данных в несколько процессов
+10: https://vimeo.com/363786791 Работа с JQuery и изменение User-Agent
+11: https://vimeo.com/363786929 Парсинг данных, подгружаемых AJAX часть 2
+12: https://vimeo.com/363787065 Используем прокси
+13: https://vimeo.com/363787115 Заключение и несколько советов
+14: https://vimeo.com/436513241 Парсинг AJAX (JQuery) на примере Steam
+15: https://vimeo.com/436760161 Авторизация с Requests и использование сессий
