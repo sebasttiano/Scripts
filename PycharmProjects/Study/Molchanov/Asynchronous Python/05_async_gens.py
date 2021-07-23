@@ -1,4 +1,4 @@
-'''Async in Python with generators'''
+"""Async in Python with generators"""
 import socket
 from select import select
 
